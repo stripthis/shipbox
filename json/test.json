@@ -1,0 +1,96 @@
+{
+    "features": [
+        {
+            "geometry": {
+                "coordinates": [
+                    0.516357421875,
+                    49.04506962208049
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "",
+                "id": "marker-hwkqsu9s0",
+                "marker-color": "#1087bf",
+                "marker-size": "medium",
+                "marker-symbol": "ferry",
+                "title": "One marker"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    0.87890625,
+                    49.102645497788814
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "",
+                "id": "marker-hwkqtg3x1",
+                "marker-color": "#1087bf",
+                "marker-size": "medium",
+                "marker-symbol": "",
+                "title": "Another one"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    0.58502197265625,
+                    49.26063518364424
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "",
+                "id": "marker-hwkr65e70",
+                "marker-color": "#1087bf",
+                "marker-size": "medium",
+                "marker-symbol": "",
+                "title": "Another one"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -1.29638671875,
+                    48.268569112964336
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "",
+                "id": "marker-hwks67aw0",
+                "marker-color": "#1087bf",
+                "marker-size": "medium",
+                "marker-symbol": "airfield",
+                "title": "another one"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    3.7683105468749996,
+                    48.29781249243716
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "",
+                "id": "marker-hwks6exs1",
+                "marker-color": "#a3e46b",
+                "marker-size": "medium",
+                "marker-symbol": "",
+                "title": "another one"
+            },
+            "type": "Feature"
+        }
+    ],
+    "id": "rbertot.ii0ef603",
+    "type": "FeatureCollection"
+}

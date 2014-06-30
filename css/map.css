@@ -1,0 +1,28 @@
+body {
+	margin:0;
+	padding:0;
+}
+
+.map-header {
+	width:100%;
+	height:50px;
+	background:#66CC00;
+}
+.map-header h1 {
+	background: transparent url(../img/logo.gif) 0 0 no-repeat;
+	width:153px;
+	height:23px;
+	padding:0;
+	margin:12px 0 0 12px;
+	float:left;
+}
+.map-header span {
+	display:none;
+}
+#map {
+	position:absolute;
+	top:50px;
+	bottom:0;
+	width:100%;
+}
+

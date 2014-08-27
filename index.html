@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=utf-8 />
-<title>A simple map</title>
-<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+	<meta charset=utf-8 />
+	<title>A simple map</title>
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
-<link href='css/map.css' rel='stylesheet' />
+	<link href='css/map.css' rel='stylesheet' />
 
-<!-- mapbox -->
-<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
+	<script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
 
-<!-- minimap -->
-<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-minimap/v1.0.0/Control.MiniMap.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-minimap/v1.0.0/Control.MiniMap.css' rel='stylesheet' />
+	<!-- mapbox -->
+	<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
 
-<!-- cluster -->
-<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
-<link href='https:////api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
+	<!-- minimap -->
+	<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-minimap/v1.0.0/Control.MiniMap.js'></script>
 
-<style>
-</style>
+	<!-- cluster -->
+	<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
+	<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
 </head>
-<body>
+<body class="ship-map classic">
 <header class="map-header">
 	<h1 class="logo"><span>Greenpeace's Ships</span></h1>
     <!--button class="menu-trigger active"><span>Show Menu</span></button-->
 </header>
-<div id='map'></div>
-<nav class="map-menu">
+<body>
+<div id='map' class='map'></div>
+<nav class="map-nav">
 	<ul>
-		<li><h2></h2></li>
-		<li><a href="#"></a><a href="#"><span>show/hide</span></a></li>
+		<li>
+			<a href="#" class="pan" data-ship="rw3"><span>Rainbow Warrior</span></a>
+			<a href="#" class="toggle" data-ship="rw3"><span>show/hide</span></a>
+		</li>
+		<li>
+			<a href="#" class="pan" data-ship="myez"><span>Ezperanza</span></a>
+			<a href="#" class="toggle" data-ship="myez"><span>show/hide</span></a>
+		</li>
 	</ul>
 </nav>
 <script src='js/shipmap.js'></script>

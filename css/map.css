@@ -1,12 +1,16 @@
 body {
 	margin:0;
 	padding:0;
+	font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
+/* greenpeace branded header */
 .map-header {
+	position:absolute;
 	width:100%;
 	height:50px;
 	background:#66CC00;
+	z-index:500;
 }
 .map-header h1 {
 	background: transparent url(../img/logo.gif) 0 0 no-repeat;
@@ -16,13 +20,72 @@ body {
 	margin:12px 0 0 12px;
 	float:left;
 }
-.map-header span {
+.map-header h1 span {
 	display:none;
 }
-#map {
+
+/* main map */
+.map {
 	position:absolute;
 	top:50px;
 	bottom:0;
 	width:100%;
 }
 
+/* map navigation */
+.map-nav {
+	position:absolute;
+	width:320px;
+	background: rgba(255, 255, 255, 0.9);
+	height:100%;
+	right:0;
+	z-index:100;
+}
+.map-nav ul {
+	margin-top:100px;
+}
+
+/* copyright */
+.ship-map.classic .leaflet-control-attribution {
+	background:transparent;
+	width:320px;
+	text-align:center;
+}
+
+/* minimap */
+.leaflet-control-minimap {
+    background: #f8f8f9;
+    transition: all .2s;
+}
+.leaflet-control-minimap a {
+    background-color: rgba(255, 255, 255, 1.0);
+    background-repeat: no-repeat;
+    z-index: 99999;
+    transition: all .2s;
+    border-radius: 3px 0px 0px 0px;
+}
+.leaflet-control-minimap a.minimized {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    border-radius: 0px;
+}
+
+.leaflet-control-minimap-toggle-display {
+    background-image: url("images/toggle.png");
+    height: 19px;
+    width: 19px;
+    position: absolute;
+    bottom: 0;
+    right: 0; 
+}
+.leaflet-oldie .leaflet-control-minimap {
+	border: 1px solid #999;
+}
+
+.leaflet-oldie .leaflet-control-minimap a {
+	background-color: #fff;
+}
+
+.leaflet-oldie .leaflet-control-minimap a.minimized {
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}

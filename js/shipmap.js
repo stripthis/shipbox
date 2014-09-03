@@ -63,6 +63,14 @@ var config = {
 	},
 	minimap : {
 		width : 300
+	},
+	selector : {
+		'minimap' : '.leaflet-control-minimap',
+		'copyright' : '.leaflet-control-attribution',
+		'menu' : '.menu-ctrl',
+		'menuTarget' : '.menu-ctrl-target',
+		'panToShip' : '.pan',
+		'toggleShip' : '.toggle',
 	}
 };
 
@@ -100,7 +108,7 @@ var app = {
 	toggleMiniMap : function() {
 		// add or remove layers
 		if (app.minimap !== undefined) {
-			$('.leaflet-control-minimap').toggleClass('hidden');
+			$(config.selector.minimap).toggleClass('hidden');
 		} else {
 			var minitile = new L.mapbox.tileLayer(config.tileLayer);
 			app.minimap = new L.Control.MiniMap(minitile, config.minimap)
@@ -136,24 +144,24 @@ var app = {
 
 	// load copyright in leaflet reserved space
 	loadCopyright : function () {
-		$(".leaflet-control-attribution").html(config.copyright);
+		$(config.selector.copyright).html(config.copyright);
 	},
 
 	// bind UI navigation event to application logic
 	bindNavEvents : function () {
 		// show/hide menu tigger
-		$( ".menu-ctrl" ).click(function(e) {
+		$(config.selector.menu).click(function(e) {
 			e.preventDefault();
 			app.onMenuToggle();
 		});
 		// show/hidde ships buttons trigger
-		$( ".toggle" ).click(function(e) {
+		$(config.selector.toggleShip).click(function(e) {
 			e.preventDefault();
 			s = this.getAttribute("data-ship");
 			app.onShipLayerToggle(s,this);
 		});
 		// goto ship button click trigger
-		$( ".pan" ).click(function(e) {
+		$(config.selector.panToShip).click(function(e) {
 			e.preventDefault();
 			s = this.getAttribute("data-ship");
 			app.onPanToShip(s);
@@ -163,8 +171,8 @@ var app = {
 	//  what happen when clickin on menu hide/show button
 	onMenuToggle : function() {
 		app.menu.open = !app.menu.open;
-		$('.menu-ctrl').toggleClass('open');
-		$('.menu-ctrl-target').toggleClass('hidden');
+		$(config.selector.menu).toggleClass('open');
+		$(config.selector.menuTarget).toggleClass('hidden');
 		app.toggleMiniMap();
 	},
 

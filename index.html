@@ -6,6 +6,9 @@
 	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
 	<link href='css/map.css' rel='stylesheet' />
+	
+	<!-- fontawesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 	<script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
 
@@ -25,18 +28,44 @@
 <header class="map-header">
 	<h1 class="logo"><span>Greenpeace's Ships</span></h1>
     <!--button class="menu-trigger active"><span>Show Menu</span></button-->
+	<a href="#" class="icon-only menu-ctrl open">
+		<i class="fa fa-bars"></i>
+		<span>show/hide menu</span>
+	</a>
 </header>
 <body>
 <div id='map' class='map'></div>
-<nav class="map-nav">
+<nav class="map-nav menu-ctrl-target">
 	<ul>
 		<li>
-			<a href="#" class="pan" data-ship="rw3"><span>Rainbow Warrior</span></a>
-			<a href="#" class="toggle" data-ship="rw3"><span>show/hide</span></a>
+			<a href="#" class="pan" data-ship="rw3">
+				<i class="icon rw3"></i>
+				<span>Rainbow Warrior</span>
+			</a>
+			<a href="#" class="toggle icon-only" data-ship="rw3">
+				<i class="fa fa-eye"></i>
+				<span>show/hide the rainbow warrior 3</span>
+			</a>
 		</li>
 		<li>
-			<a href="#" class="pan" data-ship="myez"><span>Ezperanza</span></a>
-			<a href="#" class="toggle" data-ship="myez"><span>show/hide</span></a>
+			<a href="#" class="pan" data-ship="myez">
+				<i class="icon myez"></i>
+				<span>Ezperanza</span>
+			</a>
+			<a href="#" class="toggle icon-only" data-ship="myez">
+				<i class="fa fa-eye"></i>
+				<span>show/hide the Ezperanza</span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="pan" data-ship="myas">
+				<i class="icon myas"></i>
+				<span>Arctic Sunrise</span>
+			</a>
+			<a href="#" class="toggle icon-only" data-ship="myas">
+				<i class="fa fa-eye"></i>
+				<span>show/hide the Arctic Sunrise</span>
+			</a>
 		</li>
 	</ul>
 </nav>

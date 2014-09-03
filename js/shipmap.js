@@ -71,8 +71,12 @@ var app = {
  	map : undefined, 
 	layer : undefined,
 	minimap : undefined,
-	ships : {},
-	layers : {},
+	ships : {
+		// used to get access to ships markers
+	},
+	layers : {
+		// used to get access to ship layers
+	},
 	menu : {
 		'open' : true
 	},
@@ -146,7 +150,6 @@ var app = {
 		$( ".toggle" ).click(function(e) {
 			e.preventDefault();
 			s = this.getAttribute("data-ship");
-			// do the real logic
 			app.onShipLayerToggle(s,this);
 		});
 		// goto ship button click trigger
@@ -157,7 +160,8 @@ var app = {
 		});
 	},
 
-	onMenuToggle : function(m) {
+	//  what happen when clickin on menu hide/show button
+	onMenuToggle : function() {
 		app.menu.open = !app.menu.open;
 		$('.menu-ctrl').toggleClass('open');
 		$('.menu-ctrl-target').toggleClass('hidden');
